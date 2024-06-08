@@ -2,7 +2,7 @@ input[type="time"] {
     border: none;
     background: transparent;
     color: white;
-    font-size: 2em;
+    font-size: 3.5em;
 }
 
 input[type="time"]:focus {

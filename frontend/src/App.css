@@ -1,0 +1,45 @@
+.buttons {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+	margin-top: 20px;
+}
+
+
+button {
+    background-color: rgb(52, 52, 52);
+    border: none;
+    color: aliceblue;
+    font-size: 2em;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+button:active {
+    background-color: rgb(52, 52, 52);
+    transform: scale(0.98);
+}
+
+.startButton {
+    padding-bottom: 0.2em;
+}
+.startButton:hover {
+    color: rgb(0, 204, 0);
+}
+
+.pauseButton {
+    padding-bottom: 0.2em;
+}
+.pauseButton:hover {
+    color: rgb(227, 208, 45);
+}
+
+.cancelButton:hover {
+    color: rgb(204, 0, 0);
+}

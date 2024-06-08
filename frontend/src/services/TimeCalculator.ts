@@ -1,28 +1,46 @@
-class TimeCalc {
 
-    static executionTime: number;
+class TimeCalculator implements Timer {
+    private executionTime!: number;
+    private time!: string;
 
-    private constructor() {}
+    constructor() {
+        this.executionTime = 0
+    }
 
-    static start(initialTime:string, intervalFunct: Function, stopFunct: Function){ 
-        if (initialTime === "00:00") return
-        
-        let actualTime = initialTime
+    setTimeValue(time: string) {
+        this.time = time
+    }
+
+    getTimeValue() {
+        return this.time
+    }
+
+    start(intervalFunct: Function, stopFunct: Function){ 
+        if (this.time === "00:00") return
 
         this.executionTime = setInterval(() => {
-            actualTime = TimeCalc.getNextTime(actualTime)
-            intervalFunct(actualTime)
-            if ( actualTime === "00:00:00") {
+            this.time = TimeCalculator.getNextTime(this.time)
+            intervalFunct(this.time)
+            if ( this.time === "00:00:00") {
                 clearInterval(this.executionTime)
                 stopFunct()
             }
         }, 1000)
-
     }
 
-    static stop(){
+    pause(){
+        clearInterval(this.executionTime)
+        this.executionTime = 0
+    }
+
+    stop(){
         clearInterval(this.executionTime)
         this.executionTime = 0  
+        this.time = "00:00"
+    }
+
+    isExecuting(): boolean {
+        return this.executionTime != 0
     }
 
     private static getNextTime(time: string, down: boolean = true) {
@@ -52,4 +70,4 @@ class TimeCalc {
     }    
 }
 
-export default TimeCalc
+export default TimeCalculator
