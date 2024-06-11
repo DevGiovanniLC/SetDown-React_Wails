@@ -1,3 +1,4 @@
+import Timer from '../interfaces/Timer'
 
 class TimeCalculator implements Timer {
     private executionTime!: number;
@@ -52,8 +53,7 @@ class TimeCalculator implements Timer {
 
     private static timeToSeconds(timeArray: number[]) {
         let [hour, minute, second] = timeArray
-        const timeInSeconds = hour * 3600 + minute * 60 + second
-        return timeInSeconds
+        return hour * 3600 + minute * 60 + second
     }
 
     private static secondsToTime(seconds: number) {

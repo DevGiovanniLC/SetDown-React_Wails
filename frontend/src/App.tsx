@@ -1,5 +1,6 @@
 import React, { Component, RefObject } from "react";
 import TimerComponent from "./components/TimerComponent/TimerComponent";
+import IconSelectorComponent from "./components/IconSelectorComponent/IconSelectorComponent";
 import "./App.css";
 
 
@@ -26,7 +27,8 @@ class App extends Component<AppProps , AppState> {
 	render(): React.ReactNode {
 		return (
 			<main id="App">
-				<TimerComponent ref={this.timer}></TimerComponent>
+				<TimerComponent ref={this.timer}/>
+                <IconSelectorComponent/>
 				<div className="buttons">
 					<button onClick={this.handleToggle} className={this.state.buttonClass}>{ this.state.buttonContent}</button>
 					<button onClick={this.handleCancel} className="cancelButton">⏹</button>

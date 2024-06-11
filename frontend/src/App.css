@@ -22,7 +22,7 @@ button:hover {
 }
 
 button:active {
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(50, 50, 50);
     transform: scale(0.98);
 }
 
@@ -40,6 +40,11 @@ button:active {
     color: rgb(227, 208, 45);
 }
 
+.cancelButton{
+    font-size: 1.5em;
+    width: 2.45em;
+    height: 2.45em;
+}
 .cancelButton:hover {
     color: rgb(204, 0, 0);
 }

@@ -6,3 +6,5 @@ interface Timer {
     stop(): void
     isExecuting(): boolean
 }
+
+export default Timer
