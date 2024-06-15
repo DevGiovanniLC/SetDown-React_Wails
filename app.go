@@ -3,6 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
+	"os/exec"
 )
 
 // App struct
@@ -21,12 +23,30 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-
 func (a *App) Shutdown() {
 	fmt.Println("Shutting down...")
-	// cmd := exec.Command("cmd", "/C", "shutdown", "/s", "/t", "0")
-    // err := cmd.Run()
-    // if err != nil {
-    //     log.Fatal(err)
-    // }
+	cmd := exec.Command("cmd", "/C", "shutdown", "/s", "/t", "0")
+	err := cmd.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func (a *App) Reboot() {
+	fmt.Println("Rebooting...")
+	cmd := exec.Command("cmd", "/C", "shutdown", "/r", "/t", "0")
+	err := cmd.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func (a *App) Hibernate() {
+
+	fmt.Println("Hibernating...")
+	cmd := exec.Command("cmd", "/C", "shutdown", "/h")
+	err := cmd.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 }

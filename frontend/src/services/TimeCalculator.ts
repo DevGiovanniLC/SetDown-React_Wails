@@ -19,7 +19,7 @@ class TimeCalculator implements Timer {
     start(intervalFunct: Function, stopFunct: Function){ 
         if (this.time === "00:00") return
 
-        this.executionTime = setInterval(() => {
+        this.executionTime =  setInterval(() => {
             this.time = TimeCalculator.getNextTime(this.time)
             intervalFunct(this.time)
             if ( this.time === "00:00:00") {
