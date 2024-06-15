@@ -49,7 +49,7 @@ class App extends Component<AppProps , AppState> {
     }
 
     private startTimer() {
-        this.timer.current?.start();
+        if ( ! this.timer.current?.start() ) return
         this.setState({buttonContent: "⏸", buttonClass: "pauseButton"});
     }
 

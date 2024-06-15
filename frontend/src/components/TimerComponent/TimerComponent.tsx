@@ -39,7 +39,9 @@ class TimerComponent extends Component {
 		return this.$selectedTime.current!.value;
 	}
 
-	start(): void {
+	start(): boolean {
+        if (this.$selectedTime?.current?.value.length != 8) return false
+
 		if (this.$selectedTime.current) {
 			this.timer.setTimeValue(this.$selectedTime.current.value);
 			console.log(this.$selectedTime.current.value);
@@ -52,6 +54,7 @@ class TimerComponent extends Component {
 				}
 			);
 		}
+        return true
 	}
 
 	pause(): void {
