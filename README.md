@@ -1,19 +1,30 @@
-# README
+# SetDown 
+## (Aplicación de apagado programado)
+---
 
-## About
+## Descripción
+Aplicación de escritorio para programar el apagado, reinicio e hibernación del PC, con un enfoque minimalista 
+y estético facilitando al usuario una funcionalidad aplicable en los siguientes casos de usos:
+* Apagado programado a la hora de dormir
+* Apagado del PC con el objetivo de que no consuma nada de energía
+* Temporización del apagado
 
-This is the official Wails React-TS template.
+## UI/UX (v1.0.0)
+![image](https://github.com/DevGiovanniLC/SetDown-Wails/assets/92268681/63274208-cb4d-44b5-9043-7e48384c3ea6)
+<br>
+<br>
+El apartado visual de la aplicación tiene un enfoque minimalista, usando principalmente iconos y botones en ves de texto
+para que su uso no implique un exceso de verbosidad, al pasar por encima de la aplicación muestra un texto alternativo donde indican su función en el caso de no entenderlo por la imagen
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
 
-## Live Development
+# Desarrollo
+Esta aplicación ha sido desarrollada con wails una tecnologia que aprovecha webviews para crear aplicaciones de escritorio, 
+esta está basada en golang en cuanto a la conexión con el sistema operativo (backend) y html css y javascript. 
+Aunque en este caso se usa react con typescript para el apartado visual y la interacción del usuario (frontend).
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
 
-## Building
+### Desarrollo desde el navegador
+Ejecuta `wails dev` http://localhost:34115. 
 
-To build a redistributable, production mode package, use `wails build`.
+### Compilación 
+Ejecuta `wails build` para compilar la aplicación y obtener un ejecutable.
