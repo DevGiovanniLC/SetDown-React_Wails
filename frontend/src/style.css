@@ -8,6 +8,8 @@ html {
     text-align: center;
     color: white;
     overflow: hidden;
+    user-select: none;
+    margin-top: 1.5em;
 }
 
 body {

@@ -50,17 +50,6 @@ class IconSelectorComponent extends Component {
 					/>
                     <img src={HibernateIcon} alt="reboot icon" />
 				</label>
-				<label>
-					<input
-						type="radio"
-						className="icon"
-						title="Alarm"
-						name="action"
-                        value={Mode.ALARM}
-                        onChange={() => this.actualMode = Mode.ALARM}
-					/>
-                    <img src={AlarmIcon} alt="alarm icon" />
-				</label>
 			</form>
 		);
 	}
