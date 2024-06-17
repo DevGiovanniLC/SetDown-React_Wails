@@ -39,7 +39,7 @@ func (a *App) Reboot() {
 }
 
 func (a *App) Hibernate() {
-	cmd := exec.Command("cmd", "/C", "shutdown", "/h", "/t", "5", "/c", "hibernating in 5 seconds")
+	cmd := exec.Command("cmd", "/C", "shutdown", "/h")
 	err := cmd.Run()
 	if err != nil {
 		log.Fatal(err)
