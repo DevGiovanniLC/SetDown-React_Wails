@@ -1,3 +1,13 @@
+<div align="center">
+  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" width="250" height="250"/>    
+<img src="https://github.com/user-attachments/assets/91e2c898-2d36-4220-ac96-f22f294e5551" width="280" height="280"/>
+
+</div>
+
+
+
+
 # SetDown 
 ## (Aplicación de apagado programado)
 ---
@@ -19,8 +29,8 @@ para que su uso no implique un exceso de verbosidad, al pasar por encima de la a
 
 # Desarrollo
 Esta aplicación ha sido desarrollada con wails una tecnologia que aprovecha webviews para crear aplicaciones de escritorio, 
-esta está basada en golang en cuanto a la conexión con el sistema operativo (backend) y html css y javascript. 
-Aunque en este caso se usa react con typescript para el apartado visual y la interacción del usuario (frontend).
+esta está basada en golang en cuanto a la conexión con el sistema operativo (backend). HTML, CSS y Typescript con la libreria react  
+para el apartado visual y la interacción del usuario (frontend, UI/UX).
 
 
 ### Desarrollo desde el navegador
